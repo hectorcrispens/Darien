@@ -64,7 +64,7 @@ else
 echo ""
 echo -ne "\r---------[ downloading ]--------------------------------------------------"
 sleep 2
-wget "https://sourceforge.net/projects/darien/files/fase-03.sh/download" > /dev/null 2>&1
+wget "https://sourceforge.net/projects/darien/files/darien.sh/download" > /dev/null 2>&1
 echo -ne "\r-----------------------[ change permission ]------------------------------"
 sleep 2
 chmod 777 download
