@@ -3,6 +3,7 @@
 Este pequeño comando tiene como objetivo proveer un entorno de trabajo virtualizado para el desarrollo de aplicaciones en php
 <h2> Requerimientos </h2>
 <ul>
+  <li> sistema operativo linux </li>
   <li> docker </li>
   <li> docker-compose </li>
 </ul>
