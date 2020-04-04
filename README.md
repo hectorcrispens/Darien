@@ -1,14 +1,21 @@
-# Environment
-Este pequeño script tiene como objetivo proveer un entorno de trabajo virtualizado para el desarrollo de aplicaciones en php
+# DARIEN
+# Versión 2.0 Beta
+Este pequeño comando tiene como objetivo proveer un entorno de trabajo virtualizado para el desarrollo de aplicaciones en php
 <h2> Requerimientos </h2>
 <ul>
   <li> docker </li>
   <li> docker-compose </li>
-  <li> git </li>
 </ul>
 <hr>
+<h2>Descripción</h2>
+<p>Basicamente el comando lo que hace, crear una estructura de archivos para la creación de un ambiente virtual de desarrollo con docker. Asi también proveera un conjunto de herramientas para la administración del entorno. Estas herramientas incluyen,  iniciación de los contenedores de docker, pausa y eliminación de los mismos, como asi también conexión a los contenedores de una manera mas sencilla que las provistas por docker. La idea detras de la aplicación es crear una capa superior que permita una administración y control del mismo de una forma simple y práctica.</p>
 <h2>Características</h2>
-<p>Basicamente el script lo que hace es crear una carpeta BD para la base de datos, una carpeta App donde irá el codigo de nuestra aplicación y una carpeta extras, donde de momento se colocará el archivo default.conf el cual le indicará al servidor apache cual es el controlador frontal de nuestra aplicación. El script también generará los correspondientes dockerfile y docker-compose.yml</p>
+  <p>La aplicación creará tres carpetas</p>
+  <ul>
+  <li>App: La carpeta App será la carpeta que contenga los distintos proyectos, permite proyectos en Node y PHP, el servidor apache responderá en el puerto 80 y el de node en el 3000 a menos que lo reconfigure en el archivo docker-compose.yml</li>
+  <li>BD: Está carpeta mapeará las carpetas de la base de datos, por defecto la base de datos responde en el puerto 3306 y el driver MYSQL </li>
+  <li>extras: La carpeta extras contiene una carpeta denominada variables, que incluye variables propias que maneja la aplicación, en la carpeta apache se encontrará el archivo dockerfile para la configuración del contenedor de php y el archivo defaul.conf que le permitirá al servidor apache ubicar el controlador frontal de su aplicación. y dentro de la carpeta node se encuentra el dockerfile para el contenedor de node</li>
+ </ul>
 <h2>Contenedores</h2>
 <ul>
   <li>contenedor db 
@@ -19,19 +26,16 @@ Este pequeño script tiene como objetivo proveer un entorno de trabajo virtualiz
   <li> contenedor development
     <ul>
       <li>PHP 7.2.0</li>
-      <li>NODE 8</li>
-      <li>NPM</li>
       <li>GIT</li>
       <li>APACHE 2</li>
       <li>COMPOSER</li>
       <li>LARAVEL (opcional)</li>
-      <li>SYMFONY (opcional)</li>
     </ul>
   </li>
 </ul>
 
-<h3>Características extras de la versión 2</h3>
-<p>En la nueva versión además de cambiar el nombre del script de environment.sh a env.sh para no hacerlo tan largo, se actualizaron las opciones para levantar los contenedores de docker, se mejoró un poco la gráfica y los mensajes del script y se agrego la opción para detener los contenedores y las imagenes. De esta manera permite un <strong>control integral de nuestro entorno de desarrollo virtual</strong></p>
+<h3>Guía de instalación</h3>
+<p>Para la instalación puede clonar el repositorio y ejecutar como administrador el script: 'sudo ./install.sh' , para la instalación el script debería tener ademas la carpeta instalación con los tres archivos messages.dar, functions.dar y menu.dar. Para el caso de que la carpeta no este, no se preocupe el script detectara automaticamente que falta e instentará traer desde internet el código necesario para construir la aplicación. Así que si tiene conexión a internet solo necesita el archivo install.sh y para la instalación offline necesitará install.sh + (carpeta) instalación</p>
 
 <h3>Como debe usarse</h3>
-<p>sudo ./env.sh --help</p>
+<p>sudo darien help</p>
