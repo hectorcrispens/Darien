@@ -32,6 +32,12 @@ Este pequeño comando tiene como objetivo proveer un entorno de trabajo virtuali
       <li>LARAVEL (opcional)</li>
     </ul>
   </li>
+  <li> contenedor node
+    <ul>
+      <li>NODE 8</li>
+      <li>NPM</li>
+    </ul>
+  </li>
 </ul>
 
 <h3>Guía de instalación</h3>
