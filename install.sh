@@ -49,9 +49,9 @@ sleep 2
 	#		do
 	#			echo $line >> darien
 	#	done < "$input"
-    cat instalacion/messages.dar >> darien
-    cat instalacion/functions.dar >> darien
-    cat instalacion/menu.dar >> darien
+    cat instalacion/messages.sh >> darien
+    cat instalacion/functions.sh >> darien
+    cat instalacion/menu.sh >> darien
        
 echo -ne "\r--------------------------------------------[ install command ]-----------"
 sleep 2
