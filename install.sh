@@ -91,6 +91,7 @@ cp darien.sh /usr/bin/darien
 echo -ne "\r${Cyan}--------------------------------------------[  ${IRed}remove post install ${Cyan}]------${Color_Off}"
 sleep 2
 rm -r source
+rm darien.sh
 echo -ne "\r${Cyan}-----------------------------------------------------------------[ ${IRed}done ${Cyan}]-${Color_Off}"
 sleep 2
 echo ""
