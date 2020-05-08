@@ -1,5 +1,5 @@
 # DARIEN
-# Versión 2.0 Beta
+# Versión 4.0 Beta
 Este pequeño comando tiene como objetivo proveer un entorno de trabajo virtualizado para el desarrollo de aplicaciones en php
 <h2> Requerimientos </h2>
 <ul>
@@ -31,12 +31,14 @@ Este pequeño comando tiene como objetivo proveer un entorno de trabajo virtuali
       <li>APACHE 2</li>
       <li>COMPOSER</li>
       <li>LARAVEL (opcional)</li>
+      <li>LUMEN (opcional)</li>
     </ul>
   </li>
   <li> contenedor node
     <ul>
       <li>NODE 8</li>
       <li>NPM</li>
+      <li>IONIC (opcional)</li>
     </ul>
   </li>
 </ul>
@@ -46,3 +48,6 @@ Este pequeño comando tiene como objetivo proveer un entorno de trabajo virtuali
 
 <h3>Como debe usarse</h3>
 <p>sudo darien help</p>
+
+<h3>Instalación</h3>
+<p>sudo ./install.sh</p>
